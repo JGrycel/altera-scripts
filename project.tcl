@@ -74,7 +74,7 @@ foreach file $files {
 export_assignments
 
 # Compile if instructed to
-if {[info exists ::env(TOP)]} {
+if {[info exists ::env(BUILD)]} {
   execute_flow -compile
 }
 

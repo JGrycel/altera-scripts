@@ -16,7 +16,7 @@ pre/post-synthesis Modelsim simulations.
 
 ### Variable Requirements
 - `PROJECT` needed for all targets  
-- `TOP` needed for `project` target  
+- `TOP` needed for `project`,`build` target  s
 - `TB` needed for `rtl_sim`,`syn_sim` targets
 
 
