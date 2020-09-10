@@ -6,20 +6,16 @@ projects. The main makefile supports setting up a new workspace, creating a
 Quartus Prime project, design compilation, and running/viewing
 pre/post-synthesis Modelsim simulations.
 
-**Notes**
-You must fill in the location of your altera install in the `INSTALL` variable. This should point to `/some/path/intelFPGA_lite/20.1`. Manually remove the automatic error message code after filling in the `INSTALL` variable
-
-Testbenches should have a `$stop` command in them so that simulation ends.
-
-Testbenches should have \``timescale 1ps/1ps` to be compatible with quartus post-synthesis simulations.
+### Notes
+- You must fill in the location of your altera install in the `INSTALL` variable. This should point to `/some/path/intelFPGA_lite/20.1`. Manually remove the automatic error message code after filling in the `INSTALL` variable.  
+- Testbenches should have a `$stop` command in them so that simulation ends.  
+- Testbenches should have \``timescale 1ps/1ps` to be compatible with quartus post-synthesis simulations.
 
 
-**Variable Requirements**
-`PROJECT` needed for all targets
-
-`TOP` needed for `project` target
-
-`TB` needed for `rtl_sim`,`syn_sim` targets
+### Variable Requirements
+- `PROJECT` needed for all targets  
+- `TOP` needed for `project` target  
+- `TB` needed for `rtl_sim`,`syn_sim` targets
 
 
 ### Usage
