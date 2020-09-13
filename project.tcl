@@ -65,7 +65,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 
 # Add Verilog source files
 set src_dir ../src
-set files [glob -directory $src_dir -- "*.v"]
+set files [glob -nocomplain -directory $src_dir -- "*.v"]
 foreach file $files {
 	set_global_assignment -name VERILOG_FILE $src_dir/$file
 }

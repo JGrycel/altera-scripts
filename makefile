@@ -4,7 +4,6 @@ $(error INSTALL variable not set)
 ## END ##
 
 INSTALL = REPLACE_ME
-
 QUARTUS = $(INSTALL)/quartus/bin/quartus_sh
 MODELSIM = $(INSTALL)/modelsim_ase/linux/vsim
 
@@ -15,12 +14,12 @@ endif
 
 # Default TOP is <PROJECT>_top
 ifndef TOP
-	TOP = "$(PROJECT)_top"
+	TOP = $(PROJECT)_top
 endif
 
 # Default TB is <PROJECT>_top_tb
 ifndef TB
-	TB = "$(PROJECT)_top_tb"
+	TB = $(PROJECT)_top_tb
 endif
 
 # Export variables for tools
