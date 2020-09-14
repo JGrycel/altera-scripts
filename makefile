@@ -1,11 +1,13 @@
-# !!REMOVE ME AFTER UPDATING INSTALL VARIABLE!! #
-## BEGIN ##
-$(error INSTALL variable not set)
-## END ##
+# Check if install path file exists
+ifeq ("$(wildcard ./install)","")
+$(error install path file does not exist)
+endif
 
-INSTALL = REPLACE_ME
+# Setup bin paths
+include install
 QUARTUS = $(INSTALL)/quartus/bin/quartus_sh
 MODELSIM = $(INSTALL)/modelsim_ase/linux/vsim
+
 
 # Must define project
 ifndef PROJECT
