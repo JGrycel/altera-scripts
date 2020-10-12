@@ -27,7 +27,7 @@ set tb_name $env(TB)
 vlog -vlog01compat -work syn_work $sim_dir/$tb_name.v
 
 # Run simulation
-vsim -L altera_ver -L cyclonev_ver syn_work.$tb_name
+vsim -L altera_lnsim_ver -L altera_ver -L cyclonev_ver syn_work.$tb_name
 log -r /*
 run -all
 
